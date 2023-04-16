@@ -40,16 +40,7 @@ class MainActivity : AppCompatActivity() {
                     "Please Enter Your Credentials",
                     Toast.LENGTH_LONG).show()
             }
-//            else if(ds2.isEmpty()  && ds.isNotEmpty()){
-//                Toast.makeText(this,
-//                    "Please Enter Your Password",
-//                    Toast.LENGTH_LONG).show()
-//            }
-//            else if(ds.isEmpty() && ds2.isNotEmpty()){
-//                Toast.makeText(this,
-//                "Please Enter your Enrollment no.",
-//                Toast.LENGTH_LONG).show()
-//            }
+
             else{
                 val intent = Intent(this,eff::class.java)
                 startActivity(intent)
