@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
@@ -15,9 +16,13 @@ class MainActivity : AppCompatActivity() {
         //#0047C1
 
         val fp = findViewById<TextView>(R.id.fp)
+        val huh = findViewById<ImageView>(R.id.huh)
         val logo = findViewById<AppCompatButton>(R.id.logo)
         val roll = findViewById<EditText>(R.id.roll)
         val pas = findViewById<EditText>(R.id.pas)
+        huh.setOnClickListener{
+            Toast.makeText(this,"Press me more",Toast.LENGTH_SHORT).show()
+        }
         fp.setOnClickListener{
             Toast.makeText(this,"Remember your Password",Toast.LENGTH_LONG).show()
         }
@@ -42,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             else{
-                val intent = Intent(this,eff::class.java)
+                val intent = Intent(this,`if`::class.java)
                 startActivity(intent)
             }
 

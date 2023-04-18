@@ -6,22 +6,13 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/icon"
-        android:label="Aurora"
+        android:icon="@drawable/logoi"
+        android:label="planex"
         android:supportsRtl="true"
         android:theme="@style/Theme.Task_geek_Camp"
         tools:targetApi="31">
-        <activity
-            android:name=".sw"
-            android:exported="false" />
-        <activity
-            android:name=".be"
-            android:exported="false" />
-        <activity
-            android:name=".eff"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+         <activity
+            android:name=".splashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".mf"
+            android:exported="false" />
+        <activity
+            android:name=".be"
+            android:exported="false" />
+        <activity
+            android:name="if"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

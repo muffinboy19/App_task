@@ -11,35 +11,36 @@ class be : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_be)
-        val back = findViewById<ImageButton>(R.id.back2)
-        val flow = findViewById<ImageButton>(R.id.flower2)
-        val side = findViewById<ImageButton>(R.id.side2)
-        val imv = findViewById<ImageView>(R.id.imv2)
-        val ib = findViewById<ImageButton>(R.id.ib)
+        val l2 = findViewById<ImageButton>(R.id.l2)
+        val f2 = findViewById<ImageButton>(R.id.f2)
+        val ni2 = findViewById<ImageButton>(R.id.ni2)
+        val n2 = findViewById<ImageButton>(R.id.n2)
+        val imv2  = findViewById<ImageView>(R.id.imv2)
+
         val images = arrayOf(
             R.drawable.b1,
             R.drawable.b2,
             R.drawable.b3,
         )
         var ci = 0
-
-        ib.setOnClickListener{
-            val intent = Intent(this@be,sw::class.java)
+        n2.setOnClickListener{
+            val intent = Intent(this@be,mf::class.java)
             startActivity(intent)
         }
-        back.setOnClickListener{
-            val intent = Intent(this@be,MainActivity::class.java)
-            startActivity(intent)
-        }
-        flow.setOnClickListener{
-            Toast.makeText(this,"Take me to geekHeaven", Toast.LENGTH_LONG).show()
-        }
-        side.setOnClickListener{
-            imv.setImageResource(images[ci])
+        ni2.setOnClickListener {
+            imv2.setImageResource(images[ci])
             ci++
-            if(ci>=images.size){
+            if (ci >= images.size) {
                 ci = 0
             }
+        }
+        l2.setOnClickListener{
+            val intent = Intent(this@be,MainActivity::class.java)
+            startActivity(intent)
+            }
+
+        f2.setOnClickListener{
+            Toast.makeText(this,"Take me to geekHeaven",Toast.LENGTH_LONG).show()
         }
     }
 }
